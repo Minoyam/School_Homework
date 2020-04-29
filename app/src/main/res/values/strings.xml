@@ -5,4 +5,7 @@
     <string name="bt_dialogBox_basic">기본 대화상자</string>
     <string name="bt_dialogBox_select">선택 대화상자</string>
     <string name="bt_dialogBox_homework">자기소개 대화상자</string>
+    <string name="bt_dialog_list">목록 대화상자</string>
+    <string name="bt_dialog_radio">라디오 대화상자</string>
+    <string name="bt_dialog_city">도시선택 대화상자</string>
 </resources>
