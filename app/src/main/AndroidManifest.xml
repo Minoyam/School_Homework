@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".dialogbox.InputDialogBoxActivity"></activity>
+        <activity android:name=".file.InternalStorage"></activity>
+        <activity android:name=".dialogbox.InputDialogBoxActivity" />
         <activity android:name=".dialogbox.ListDialogBoxActivity" />
         <activity android:name=".dialogbox.DialogBoxActivity" />
         <activity android:name=".contextmenu.ContextMenuActivity" />
