@@ -2,4 +2,7 @@
     <string name="app_name">SHW</string>
     <string name="context_et_text">성별을 입력하려면 길게 눌러주세요.</string>
     <string name="context_bt_color">색상</string>
+    <string name="bt_dialogBox_basic">기본 대화상자</string>
+    <string name="bt_dialogBox_select">선택 대화상자</string>
+    <string name="bt_dialogBox_homework">자기소개 대화상자</string>
 </resources>
