@@ -8,4 +8,11 @@
     <string name="bt_dialog_list">목록 대화상자</string>
     <string name="bt_dialog_radio">라디오 대화상자</string>
     <string name="bt_dialog_city">도시선택 대화상자</string>
+    <string name="bt_file_internal_write">내부 메모리에 파일 쓰기</string>
+    <string name="bt_file_internal_read">내부 메모리에 파일 읽기</string>
+    <string name="et_dialog_papa">아버지 성함</string>
+    <string name="et_dialog_mama">어머니 성함</string>
+    <string name="bt_dialog_input_name">부모님 성함 입력</string>
+    <string name="et_dialog_input_papa">아버지 성함을 입력해주세요.</string>
+    <string name="et_dialog_input_mama">어머니 성함을 입력해주세요.</string>
 </resources>
