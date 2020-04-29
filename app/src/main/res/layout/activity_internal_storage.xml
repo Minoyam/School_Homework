@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".file.InternalStorage">
+    tools:context=".file.InternalStorageActivity">
 
     <EditText
         android:id="@+id/et_file_name"

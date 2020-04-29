@@ -15,4 +15,9 @@
     <string name="bt_dialog_input_name">부모님 성함 입력</string>
     <string name="et_dialog_input_papa">아버지 성함을 입력해주세요.</string>
     <string name="et_dialog_input_mama">어머니 성함을 입력해주세요.</string>
+    <string name="et_sd_name">파일명</string>
+    <string name="et_sd_text">파일내용</string>
+    <string name="bt_sd_path">SD card 경로명</string>
+    <string name="bt_sd_write">SD card에 쓰기</string>
+    <string name="bt_sd_read">SD card에 읽기</string>
 </resources>
