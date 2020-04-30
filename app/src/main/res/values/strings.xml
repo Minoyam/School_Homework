@@ -20,4 +20,5 @@
     <string name="bt_sd_path">SD card 경로명</string>
     <string name="bt_sd_write">SD card에 쓰기</string>
     <string name="bt_sd_read">SD card에 읽기</string>
+    <string name="bt_resource_read">리소스에서 읽기</string>
 </resources>
