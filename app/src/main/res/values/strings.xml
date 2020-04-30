@@ -21,4 +21,7 @@
     <string name="bt_sd_write">SD card에 쓰기</string>
     <string name="bt_sd_read">SD card에 읽기</string>
     <string name="bt_resource_read">리소스에서 읽기</string>
+    <string name="bt_delete">파일 삭제</string>
+    <string name="bt_delete_directory">directory 만들기</string>
+    <string name="et_dir_name">폴더 이름을 적어주세요</string>
 </resources>

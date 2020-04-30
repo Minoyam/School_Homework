@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_delete_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/et_sd_name" />
+
+    <EditText
+        android:id="@+id/et_delete_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/et_sd_text" />
+
+    <Button
+        android:id="@+id/bt_delete_resource_read"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bt_resource_read" />
+
+    <Button
+        android:id="@+id/bt_delete_write"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bt_sd_write" />
+
+    <Button
+        android:id="@+id/bt_delete_read"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bt_sd_read" />
+
+    <Button
+        android:id="@+id/bt_delete_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bt_delete" />
+    <Button
+        android:id="@+id/bt_delete_directory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bt_delete_directory" />
+
+
+</LinearLayout>
