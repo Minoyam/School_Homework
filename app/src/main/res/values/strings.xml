@@ -24,4 +24,7 @@
     <string name="bt_delete">파일 삭제</string>
     <string name="bt_delete_directory">directory 만들기</string>
     <string name="et_dir_name">폴더 이름을 적어주세요</string>
+    <string name="bt_clip_copy">복사</string>
+    <string name="bt_clip_paste">붙여넣기</string>
+    <string name="bt_clip_cut">잘라내기</string>
 </resources>
