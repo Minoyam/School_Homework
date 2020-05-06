@@ -4,28 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".clipboard.Clipboard1Activity">
+    tools:context=".clipboard.ClipboardIntentActivity">
 
     <EditText
-        android:id="@+id/et_clip_text"
+        android:id="@+id/et_clip_intent_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/bt_clip_copy"
+        android:id="@+id/bt_clip_intent_copy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/bt_clip_copy" />
 
     <Button
-        android:id="@+id/bt_clip_paste"
+        android:id="@+id/bt_clip_intent_paste"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/bt_clip_paste" />
-    <Button
-        android:id="@+id/bt_clip_cut"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/bt_clip_cut" />
 
 </LinearLayout>

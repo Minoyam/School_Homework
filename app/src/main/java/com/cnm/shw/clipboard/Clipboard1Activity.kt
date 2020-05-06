@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.cnm.shw.R
 import kotlinx.android.synthetic.main.activity_clipboard_1.*
 
-class Clipboard1 : AppCompatActivity() {
+class Clipboard1Activity : AppCompatActivity() {
 
     private lateinit var cm: ClipboardManager
     private lateinit var data: ClipData
