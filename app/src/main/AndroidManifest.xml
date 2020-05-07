@@ -9,14 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".listview.RecyclerActivity">
+        <activity
+            android:name=".listview.Recycler2Activity"
+            android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".clipboard.ClipboardIntentActivity"/>
+        <activity android:name=".listview.RecyclerActivity" />
+        <activity android:name=".clipboard.ClipboardIntentActivity" />
         <activity android:name=".clipboard.Clipboard1Activity" />
         <activity android:name=".file.FileDeleteActivity" />
         <activity android:name=".file.ResourceFileActivity" />
