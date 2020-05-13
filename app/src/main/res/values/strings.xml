@@ -29,4 +29,5 @@
     <string name="bt_clip_cut">잘라내기</string>
     <string name="bt_recycler2_append">추가</string>
     <string name="bt_recycler2_delete">삭제</string>
+    <string name="bt_shopping_buy">구입하기</string>
 </resources>

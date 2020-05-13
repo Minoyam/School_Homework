@@ -1,5 +1,6 @@
 package com.cnm.shw.shoppingmall
 
+import android.service.autofill.OnClickAction
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
@@ -7,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.cnm.shw.R
 import com.cnm.shw.databinding.ItemShoppingBinding
 
-class ShoppingAdapter : RecyclerView.Adapter<ShoppingAdapter.ShoppingViewHolder>() {
+class ShoppingAdapter(private val onClickAction: (String) -> Unit) : RecyclerView.Adapter<ShoppingAdapter.ShoppingViewHolder>() {
     private val shopItems = mutableListOf<ProductEnum>()
     fun setItem(items : List<ProductEnum>){
         shopItems.clear()
@@ -30,6 +31,12 @@ class ShoppingAdapter : RecyclerView.Adapter<ShoppingAdapter.ShoppingViewHolder>
 
     inner class ShoppingViewHolder(private val binding: ItemShoppingBinding) :
         RecyclerView.ViewHolder(binding.root) {
+        init {
+            binding.btShoppingBuy.setOnClickListener {
+             val item = shopItems[adapterPosition].price
+                onClickAction(item)
+            }
+        }
         fun bind(item : ProductEnum){
             binding.item = item
         }

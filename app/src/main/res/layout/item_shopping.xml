@@ -7,6 +7,9 @@
         <variable
             name="item"
             type="com.cnm.shw.shoppingmall.ProductEnum" />
+        <variable
+            name="ac"
+            type="com.cnm.shw.shoppingmall.ShoppingMallActivity" />
     </data>
 
     <LinearLayout
@@ -27,21 +30,46 @@
                 android:layout_weight="1"
                 bind:bindImage="@{item.img}" />
 
-            <TextView
-                android:id="@+id/tv_shopping_body"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@{item.body}"
-                android:textSize="12sp" />
+                android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/et_shopping_price"
+                <TextView
+                    android:id="@+id/tv_shopping_body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{item.body}"
+                    android:textSize="12sp" />
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:rating="@{item.rating}"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@{item.price}"
-                android:textSize="12sp" />
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/et_shopping_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    bind:bindPrice="@{item.price}"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/bt_shopping_buy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/bt_shopping_buy" />
+            </LinearLayout>
         </LinearLayout>
 
         <View

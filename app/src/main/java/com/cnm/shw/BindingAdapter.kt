@@ -1,5 +1,6 @@
 package com.cnm.shw
 
+import android.widget.EditText
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -17,25 +18,34 @@ fun RecyclerView.bindSetCategoryItem(items: List<String>) {
             (adapter as MainAdapter2).setItems(it)
         }
 }
-@BindingAdapter("bind:bindGridItem")
-fun RecyclerView.bindGridItem(items: List<GridResponse>){
 
-    if(adapter is GridAdapter)
+@BindingAdapter("bind:bindGridItem")
+fun RecyclerView.bindGridItem(items: List<GridResponse>) {
+
+    if (adapter is GridAdapter)
         items.let {
             (adapter as GridAdapter).setItems(it)
         }
 }
 
 @BindingAdapter("bind:bindShoppingItem")
-fun RecyclerView.bindShoppingItem(items: List<ProductEnum>){
-    if(adapter is ShoppingAdapter)
+fun RecyclerView.bindShoppingItem(items: List<ProductEnum>) {
+    if (adapter is ShoppingAdapter)
         items.let {
             (adapter as ShoppingAdapter).setItem(it)
         }
 }
+
 @BindingAdapter("bind:bindImage")
-fun bindImage(imageView: ImageView, imageUri: String){
+fun bindImage(imageView: ImageView, imageUri: String) {
     imageUri.let {
-        Glide.with(imageView.context).load(imageUri).override(200,200).into(imageView)
+        Glide.with(imageView.context).load(imageUri).override(200, 200).into(imageView)
+    }
+}
+
+@BindingAdapter("bind:bindPrice")
+fun bindPrice(editText: EditText, price: String){
+    price.let {
+        editText.setText("가격 = "+price)
     }
 }

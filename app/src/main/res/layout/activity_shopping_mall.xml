@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="ac"
             type="com.cnm.shw.shoppingmall.ShoppingMallActivity" />
@@ -16,11 +15,30 @@
         android:orientation="vertical"
         tools:context=".shoppingmall.ShoppingMallActivity">
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="총 구매 가격:"/>
+            <TextView
+                android:id="@+id/tv_shopping_final_price"
+                android:layout_width="wrap_content"
+                android:text="0원"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGray" />
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_shopping_content"
             android:layout_width="match_parent"
-            bind:bindShoppingItem="@{ac.items}"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            bind:bindShoppingItem="@{ac.items}" />
     </LinearLayout>
 
 </layout>
