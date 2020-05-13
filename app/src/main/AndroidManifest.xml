@@ -11,16 +11,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".shoppingmall.ShoppingMallActivity"
-            android:windowSoftInputMode="stateAlwaysHidden">
+        <activity android:name=".preference.PreferenceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".listview.GridLayoutActivity"/>
-        <activity android:name=".listview.Recycler2Activity"/>
+        <activity
+            android:name=".shoppingmall.ShoppingMallActivity"
+            android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity android:name=".listview.GridLayoutActivity" />
+        <activity android:name=".listview.Recycler2Activity" />
         <activity android:name=".listview.RecyclerActivity" />
         <activity android:name=".clipboard.ClipboardIntentActivity" />
         <activity android:name=".clipboard.Clipboard1Activity" />
