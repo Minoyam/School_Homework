@@ -1,9 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/cl_layout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".draw.DrawActivity">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="ac"
+            type="com.cnm.shw.draw.DrawActivity" />
+    </data>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".draw.DrawActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_draw_orange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="@{() -> ac.drawColor(1)}"
+            android:text="주황색" />
+
+        <Button
+            android:id="@+id/bt_draw_brown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="@{() -> ac.drawColor(2)}"
+            android:text="갈색" />
+
+        <Button
+            android:id="@+id/bt_draw_pink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="@{() -> ac.drawColor(3)}"
+            android:text="핑크색" />
+
+        <Button
+            android:id="@+id/bt_draw_sky"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="@{() -> ac.drawColor(4)}"
+            android:text="하늘색" />
+
+        <Button
+            android:id="@+id/bt_draw_purple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="@{() -> ac.drawColor(5)}"
+            android:text="보라색" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_draw_fill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> ac.drawFill(true)}"
+            android:text="채우기" />
+
+        <Button
+            android:id="@+id/bt_draw_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> ac.drawFill(false)}"
+            android:text="윤곽선" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" />
+    </LinearLayout>
+</layout>

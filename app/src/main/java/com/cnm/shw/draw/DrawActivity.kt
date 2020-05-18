@@ -10,7 +10,9 @@ import android.view.MenuItem
 import android.view.MotionEvent
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import com.cnm.shw.R
+import com.cnm.shw.databinding.ActivityDrawBinding
 import kotlinx.android.synthetic.main.activity_draw.*
 
 
@@ -22,12 +24,16 @@ class DrawActivity : AppCompatActivity() {
     lateinit var myView: MyView
     private val p = Paint()
     private var selectFigure: Int = 0
+    private lateinit var binding: ActivityDrawBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_draw)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_draw)
+        binding.ac = this
         myView = MyView(this)
         cl_layout.addView(myView)
+
+
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
@@ -53,12 +59,12 @@ class DrawActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.im_draw_blue -> p.color = Color.BLUE
-            R.id.im_draw_green -> p.color = Color.GREEN
-            R.id.im_draw_red -> p.color = Color.RED
-            R.id.im_draw_gray -> p.color = Color.GRAY
-            R.id.im_draw_black -> p.color = Color.BLACK
-            R.id.im_draw_yellow -> p.color = Color.YELLOW
+            R.id.im_draw_blue -> drawColor(Color.BLUE)
+            R.id.im_draw_green -> drawColor(Color.GREEN)
+            R.id.im_draw_red -> drawColor(Color.RED)
+            R.id.im_draw_gray -> drawColor(Color.GRAY)
+            R.id.im_draw_black -> drawColor(Color.BLACK)
+            R.id.im_draw_yellow -> drawColor(Color.YELLOW)
             R.id.im_rectangle -> selectFigure = 0
             R.id.im_circle -> selectFigure = 2
             R.id.im_line -> selectFigure = 1
@@ -75,8 +81,7 @@ class DrawActivity : AppCompatActivity() {
             when (selectFigure) {
                 0 -> canvas?.drawRect(startX, startY, endX, endY, p)
                 1 -> canvas?.drawLine(startX, startY, endX, endY, p)
-                2 -> canvas?.drawCircle(startX, startY,100F,p)
-
+                2 -> canvas?.drawCircle(startX, startY, 100F, p)
             }
             var string: String = ""
             string = "startX = $startX  startY = $startY   endX = $endX   endY = $endY"
@@ -84,6 +89,24 @@ class DrawActivity : AppCompatActivity() {
 
 
         }
+    }
+
+    fun drawColor(color: Int) {
+        when (color) {
+            1 -> p.color = resources.getColor(R.color.colorOrange)
+            2 -> p.color = resources.getColor(R.color.colorBrown)
+            3 -> p.color = resources.getColor(R.color.colorPink)
+            4 -> p.color = resources.getColor(R.color.colorSky)
+            5 -> p.color = resources.getColor(R.color.colorPurple)
+            else -> p.color = color
+        }
+    }
+
+    fun drawFill(boolean: Boolean){
+        if(boolean)
+            p.style = Paint.Style.FILL
+        else
+            p.style = Paint.Style.STROKE
     }
 }
 

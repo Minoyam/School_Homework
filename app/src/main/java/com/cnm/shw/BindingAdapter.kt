@@ -1,5 +1,6 @@
 package com.cnm.shw
 
+import android.graphics.Color
 import android.widget.EditText
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
