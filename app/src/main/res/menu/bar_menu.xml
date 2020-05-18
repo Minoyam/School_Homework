@@ -3,48 +3,45 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/im_group_gray"
-        android:title="회색계통"
+        android:id="@+id/im_group_color"
+        android:title="색상"
         app:showAsAction="never">
         <menu>
             <item
-                android:id="@+id/im_dark_gray"
-                android:title="짙은 회색" />
+                android:id="@+id/im_draw_red"
+                android:title="빨간색" />
             <item
-                android:id="@+id/im_normal_gray"
-                android:title="일반 회색" />
+                android:id="@+id/im_draw_blue"
+                android:title="파란색" />
             <item
-                android:id="@+id/im_light_gray"
-                android:title="밝은 회색" />
+                android:id="@+id/im_draw_green"
+                android:title="녹색" />
+            <item
+                android:id="@+id/im_draw_yellow"
+                android:title="노란색" />
+            <item
+                android:id="@+id/im_draw_black"
+                android:title="검은색" />
+            <item
+                android:id="@+id/im_draw_gray"
+                android:title="회색" />
         </menu>
 
     </item>
     <item
-        android:id="@+id/im_red"
-        android:title="빨강색"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/im_green"
-        android:title="녹색"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/im_blue"
-        android:title="파랑색"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/group_favorite"
-        android:title="내가 좋아하는색"
+        android:id="@+id/im_group_figure"
+        android:title="도형"
         app:showAsAction="never">
         <menu>
             <item
-                android:id="@+id/im_white"
-                android:title="주황색" />
+                android:id="@+id/im_line"
+                android:title="직선" />
             <item
-                android:id="@+id/im_yellow"
-                android:title="보라색" />
+                android:id="@+id/im_rectangle"
+                android:title="사각형" />
             <item
-                android:id="@+id/im_black"
-                android:title="하늘색" />
+                android:id="@+id/im_circle"
+                android:title="원" />
         </menu>
     </item>
 </menu>

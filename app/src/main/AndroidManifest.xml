@@ -19,9 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".preference.PreferenceActivity"/>
-        <activity
-            android:name=".shoppingmall.ShoppingMallActivity"
-            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <activity android:name=".shoppingmall.ShoppingMallActivity"/>
         <activity android:name=".listview.GridLayoutActivity" />
         <activity android:name=".listview.Recycler2Activity" />
         <activity android:name=".listview.RecyclerActivity" />
