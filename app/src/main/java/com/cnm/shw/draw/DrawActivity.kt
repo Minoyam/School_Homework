@@ -5,6 +5,7 @@ import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.MotionEvent
@@ -21,18 +22,18 @@ class DrawActivity : AppCompatActivity() {
     var startY = 0.0f
     var endX = 0.0f
     var endY = 0.0f
-    lateinit var myView: MyView
+    var drawcolor = 0
+    private lateinit var myView: MyView
     private val p = Paint()
     private var selectFigure: Int = 0
     private lateinit var binding: ActivityDrawBinding
-
+    private val list = mutableListOf<DrawData.Body>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_draw)
         binding.ac = this
         myView = MyView(this)
         cl_layout.addView(myView)
-
 
     }
 
@@ -42,12 +43,20 @@ class DrawActivity : AppCompatActivity() {
                 startX = event.x
                 startY = event.y
             }
-            MotionEvent.ACTION_UP, MotionEvent.ACTION_MOVE -> {
+            MotionEvent.ACTION_MOVE ->{
                 endX = event.x
                 endY = event.y
                 myView.invalidate()
             }
+            MotionEvent.ACTION_UP ->{
+                endX = event.x
+                endY = event.y
+                list.add(DrawData.Body(startX, startY, endX, endY,selectFigure,p.color))
+                myView.invalidate()
+            }
+
         }
+
         return true
 
     }
@@ -73,37 +82,40 @@ class DrawActivity : AppCompatActivity() {
     }
 
     inner class MyView(context: Context) : View(context) {
-        private val s = Paint()
         override fun onDraw(canvas: Canvas?) {
             super.onDraw(canvas)
-            s.color = Color.BLUE
-            s.textSize = 30f
+            if(list.isNotEmpty()){
+                list.forEach {
+                    p.color = it.color
+                    when (it.select) {
+                        0 -> canvas?.drawRect(it.startX, it.startY, it.endX, it.endY, p)
+                        1 -> canvas?.drawLine(it.startX, it.startY, it.endX, it.endY, p)
+                        2 -> canvas?.drawCircle(it.startX, it.startY, 100F, p)
+                    }
+                }
+            }
+            p.color = drawcolor
             when (selectFigure) {
                 0 -> canvas?.drawRect(startX, startY, endX, endY, p)
                 1 -> canvas?.drawLine(startX, startY, endX, endY, p)
                 2 -> canvas?.drawCircle(startX, startY, 100F, p)
             }
-            var string: String = ""
-            string = "startX = $startX  startY = $startY   endX = $endX   endY = $endY"
-            canvas?.drawText(string, 10F, 1500F, s)
-
-
         }
     }
 
     fun drawColor(color: Int) {
-        when (color) {
-            1 -> p.color = resources.getColor(R.color.colorOrange)
-            2 -> p.color = resources.getColor(R.color.colorBrown)
-            3 -> p.color = resources.getColor(R.color.colorPink)
-            4 -> p.color = resources.getColor(R.color.colorSky)
-            5 -> p.color = resources.getColor(R.color.colorPurple)
-            else -> p.color = color
+        drawcolor = when (color) {
+            1 -> resources.getColor(R.color.colorOrange)
+            2 -> resources.getColor(R.color.colorBrown)
+            3 -> resources.getColor(R.color.colorPink)
+            4 -> resources.getColor(R.color.colorSky)
+            5 -> resources.getColor(R.color.colorPurple)
+            else -> color
         }
     }
 
-    fun drawFill(boolean: Boolean){
-        if(boolean)
+    fun drawFill(boolean: Boolean) {
+        if (boolean)
             p.style = Paint.Style.FILL
         else
             p.style = Paint.Style.STROKE
