@@ -11,14 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".webview.WebViewActivity">
+        <activity android:name=".parsing.ParsingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".draw.DrawActivity"/>
+        <activity android:name=".webview.WebViewActivity"/>
+        <activity android:name=".draw.DrawActivity" />
         <activity android:name=".preference.PreferenceActivity" />
         <activity android:name=".shoppingmall.ShoppingMallActivity" />
         <activity android:name=".listview.GridLayoutActivity" />
