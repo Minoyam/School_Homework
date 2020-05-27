@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.CalActivity">
+
+    <Button
+        android:id="@+id/bt_fragment_plus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Plus frag 추가" />
+
+    <Button
+        android:id="@+id/bt_fragment_minus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Minus frag 추가" />
+
+    <Button
+        android:id="@+id/bt_fragment_remove"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="frag 지우기" />
+
+    <FrameLayout
+        android:id="@+id/fl_show"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
