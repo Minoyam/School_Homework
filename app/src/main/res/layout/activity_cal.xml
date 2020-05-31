@@ -16,50 +16,41 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Plus frag 추가" />
+        <Button
+            android:id="@+id/bt_fragment_plus_remove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Plus frag 지우기" />
+        <Button
+            android:id="@+id/bt_fragment_plus_toggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="위 toggle" />
 
         <FrameLayout
             android:id="@+id/fl_show_plus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/bt_fragment_minus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Minus frag 추가" />
-
-        <FrameLayout
-            android:id="@+id/fl_show_minus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
         <Button
             android:id="@+id/bt_fragment_mul"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Multiple frag 추가" />
+        <Button
+            android:id="@+id/bt_fragment_mul_remove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mul frag 지우기" />
+        <Button
+            android:id="@+id/bt_fragment_mul_toggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="아래 toggle" />
 
         <FrameLayout
             android:id="@+id/fl_show_mul"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/bt_fragment_div"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Division frag 추가" />
-
-        <FrameLayout
-            android:id="@+id/fl_show_div"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/bt_fragment_remove"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="frag 지우기" />
     </LinearLayout>
 </ScrollView>
 

@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cnm.shw.R
-import kotlinx.android.synthetic.main.fragment_cal.*
+import kotlinx.android.synthetic.main.fragment_plus_cal.*
 
 class MinusFragment : Fragment(){
 
@@ -15,7 +15,7 @@ class MinusFragment : Fragment(){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_cal,container,false)
+        return inflater.inflate(R.layout.fragment_plus_cal,container,false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
