@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import com.cnm.shw.R
 import kotlinx.android.synthetic.main.fragment_cal.*
 
-class MinusFragment : Fragment(){
+class MulFragment : Fragment(){
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -24,7 +24,7 @@ class MinusFragment : Fragment(){
             if (et_fragment_num1.text.isNotEmpty() && et_fragment_num2.text.isNotEmpty()) {
                 val num1 = et_fragment_num1.text.toString().toInt()
                 val num2 = et_fragment_num2.text.toString().toInt()
-                tv_fragment_result.text = "빼기: "+ (num1 - num2).toString()
+                tv_fragment_result.text = "곱하기: "+ (num1 * num2).toString()
             }
         }
 

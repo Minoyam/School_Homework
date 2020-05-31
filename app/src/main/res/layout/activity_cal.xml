@@ -1,32 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".fragment.CalActivity">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/bt_fragment_plus"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Plus frag 추가" />
+        android:orientation="vertical"
+        tools:context=".fragment.CalActivity">
 
-    <Button
-        android:id="@+id/bt_fragment_minus"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Minus frag 추가" />
+        <Button
+            android:id="@+id/bt_fragment_plus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Plus frag 추가" />
 
-    <Button
-        android:id="@+id/bt_fragment_remove"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="frag 지우기" />
+        <FrameLayout
+            android:id="@+id/fl_show_plus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-    <FrameLayout
-        android:id="@+id/fl_show"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/bt_fragment_minus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Minus frag 추가" />
 
-</LinearLayout>
+        <FrameLayout
+            android:id="@+id/fl_show_minus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/bt_fragment_mul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Multiple frag 추가" />
+
+        <FrameLayout
+            android:id="@+id/fl_show_mul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/bt_fragment_div"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Division frag 추가" />
+
+        <FrameLayout
+            android:id="@+id/fl_show_div"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/bt_fragment_remove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="frag 지우기" />
+    </LinearLayout>
+</ScrollView>
+

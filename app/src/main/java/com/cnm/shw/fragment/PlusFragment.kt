@@ -23,7 +23,7 @@ class PlusFragment : Fragment() {
             if (et_fragment_num1.text.isNotEmpty() && et_fragment_num2.text.isNotEmpty()) {
                 val num1 = et_fragment_num1.text.toString().toInt()
                 val num2 = et_fragment_num2.text.toString().toInt()
-                tv_fragment_result.text = (num1 + num2).toString()
+                tv_fragment_result.text = "더하기: "+(num1 + num2).toString()
             }
         }
 

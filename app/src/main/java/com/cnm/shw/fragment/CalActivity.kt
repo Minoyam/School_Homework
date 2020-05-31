@@ -20,6 +20,12 @@ class CalActivity : AppCompatActivity() {
         bt_fragment_minus.setOnClickListener {
             createFrag(MinusFragment())
         }
+        bt_fragment_mul.setOnClickListener {
+            createFrag(MulFragment())
+        }
+        bt_fragment_div.setOnClickListener {
+            createFrag(DivFragment())
+        }
         bt_fragment_remove.setOnClickListener {
             removeFrag()
         }
@@ -33,6 +39,24 @@ class CalActivity : AppCompatActivity() {
 
     private fun createFrag(fragment: Fragment) {
         val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.fl_show, fragment).addToBackStack(null).commit()
+        removeFrag()
+        when (fragment) {
+            is PlusFragment -> {
+                fragmentTransaction.replace(R.id.fl_show_plus, fragment).addToBackStack(null)
+                    .commit()
+            }
+            is MinusFragment -> {
+                fragmentTransaction.replace(R.id.fl_show_minus, fragment).addToBackStack(null)
+                    .commit()
+            }
+            is MulFragment -> {
+                fragmentTransaction.replace(R.id.fl_show_mul, fragment).addToBackStack(null)
+                    .commit()
+            }
+            is DivFragment -> {
+                fragmentTransaction.replace(R.id.fl_show_div, fragment).addToBackStack(null)
+                    .commit()
+            }
+        }
     }
 }
