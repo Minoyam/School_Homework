@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorGray" />
+
+    <TextView
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary" />
+
+    <TextView
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent" />
+
+    <TextView
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorOrange" />
+
+    <TextView
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorPink" />
+
+    <TextView
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorSky" />
+
+    <TextView
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorBrown" />
+
+    <TextView
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark" />
+
+    <TextView
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorPurple" />
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:text="가로"
+    android:gravity="center"
+    android:textSize="24sp"
+    android:textStyle="bold"/>
+</LinearLayout>
