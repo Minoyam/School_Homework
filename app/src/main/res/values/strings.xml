@@ -1,33 +1,36 @@
 <resources>
-    <string name="app_name">SHW</string>
-    <string name="context_et_text">성별을 입력하려면 길게 눌러주세요.</string>
-    <string name="context_bt_color">색상</string>
-    <string name="bt_dialogBox_basic">기본 대화상자</string>
-    <string name="bt_dialogBox_select">선택 대화상자</string>
-    <string name="bt_dialogBox_homework">자기소개 대화상자</string>
-    <string name="bt_dialog_list">목록 대화상자</string>
-    <string name="bt_dialog_radio">라디오 대화상자</string>
-    <string name="bt_dialog_city">도시선택 대화상자</string>
-    <string name="bt_file_internal_write">내부 메모리에 파일 쓰기</string>
-    <string name="bt_file_internal_read">내부 메모리에 파일 읽기</string>
-    <string name="et_dialog_papa">아버지 성함</string>
-    <string name="et_dialog_mama">어머니 성함</string>
-    <string name="bt_dialog_input_name">부모님 성함 입력</string>
-    <string name="et_dialog_input_papa">아버지 성함을 입력해주세요.</string>
-    <string name="et_dialog_input_mama">어머니 성함을 입력해주세요.</string>
-    <string name="et_sd_name">파일명</string>
-    <string name="et_sd_text">파일내용</string>
-    <string name="bt_sd_path">SD card 경로명</string>
-    <string name="bt_sd_write">SD card에 쓰기</string>
-    <string name="bt_sd_read">SD card에 읽기</string>
-    <string name="bt_resource_read">리소스에서 읽기</string>
-    <string name="bt_delete">파일 삭제</string>
-    <string name="bt_delete_directory">directory 만들기</string>
-    <string name="et_dir_name">폴더 이름을 적어주세요</string>
-    <string name="bt_clip_copy">복사</string>
-    <string name="bt_clip_paste">붙여넣기</string>
-    <string name="bt_clip_cut">잘라내기</string>
-    <string name="bt_recycler2_append">추가</string>
-    <string name="bt_recycler2_delete">삭제</string>
-    <string name="bt_shopping_buy">구입하기</string>
+    <string name="app_name" translatable="false">SHW</string>
+    <string name="context_et_text" translatable="false">성별을 입력하려면 길게 눌러주세요.</string>
+    <string name="context_bt_color" translatable="false">색상</string>
+    <string name="bt_dialogBox_basic" translatable="false">기본 대화상자</string>
+    <string name="bt_dialogBox_select" translatable="false">선택 대화상자</string>
+    <string name="bt_dialogBox_homework" translatable="false">자기소개 대화상자</string>
+    <string name="bt_dialog_list" translatable="false">목록 대화상자</string>
+    <string name="bt_dialog_radio" translatable="false">라디오 대화상자</string>
+    <string name="bt_dialog_city" translatable="false">도시선택 대화상자</string>
+    <string name="bt_file_internal_write" translatable="false">내부 메모리에 파일 쓰기</string>
+    <string name="bt_file_internal_read" translatable="false">내부 메모리에 파일 읽기</string>
+    <string name="et_dialog_papa" translatable="false">아버지 성함</string>
+    <string name="et_dialog_mama" translatable="false">어머니 성함</string>
+    <string name="bt_dialog_input_name" translatable="false">부모님 성함 입력</string>
+    <string name="et_dialog_input_papa" translatable="false">아버지 성함을 입력해주세요.</string>
+    <string name="et_dialog_input_mama" translatable="false">어머니 성함을 입력해주세요.</string>
+    <string name="et_sd_name" translatable="false">파일명</string>
+    <string name="et_sd_text" translatable="false">파일내용</string>
+    <string name="bt_sd_path" translatable="false">SD card 경로명</string>
+    <string name="bt_sd_write" translatable="false">SD card에 쓰기</string>
+    <string name="bt_sd_read" translatable="false">SD card에 읽기</string>
+    <string name="bt_resource_read" translatable="false">리소스에서 읽기</string>
+    <string name="bt_delete" translatable="false">파일 삭제</string>
+    <string name="bt_delete_directory" translatable="false">directory 만들기</string>
+    <string name="et_dir_name" translatable="false">폴더 이름을 적어주세요</string>
+    <string name="bt_clip_copy" translatable="false">복사</string>
+    <string name="bt_clip_paste" translatable="false">붙여넣기</string>
+    <string name="bt_clip_cut" translatable="false">잘라내기</string>
+    <string name="bt_recycler2_append" translatable="false">추가</string>
+    <string name="bt_recycler2_delete" translatable="false">삭제</string>
+    <string name="bt_shopping_buy" translatable="false">구입하기</string>
+    <string name="thx">고맙습니다</string>
+    <string name="hello">안녕하세요</string>
+    <string name="press">누르다</string>
 </resources>
