@@ -1,43 +1,42 @@
 package com.cnm.shw.parsing
 
+import android.content.res.Resources
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.cnm.shw.R
 import kotlinx.android.synthetic.main.activity_parsing.*
 import org.xmlpull.v1.XmlPullParser
 import org.xmlpull.v1.XmlPullParserFactory
+import java.io.InputStream
 import java.io.StringReader
 
 class ParsingActivity : AppCompatActivity() {
 
-    private val s: String = "<?xml version=\"1.0\" encoding=\"utf-8\"?> \n" +
-            "<students>\n" +
-            "<student>\n" +
-            "<name>홍길동</name> <age>34</age> <sex>남성</sex>\n" +
-            "</student>\n" +
-            "<student>\n" +
-            "<name>유관순</name> <age>18</age> <sex>여성</sex>\n" +
-            "</student>\n" +
-            "<student>\n" +
-            "<name>김민호</name> <age>27</age> <sex>남성</sex>\n" +
-            "</student>\n" +
-            "</students>\n"
-    private var r: String = ""
 
+    private var r: String = ""
+    private var s : String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_parsing)
-        tv_parsing_text.text = s
+
         bt_parsing_run.setOnClickListener {
             try {
                 val parser: XmlPullParser
                 val fact: XmlPullParserFactory = XmlPullParserFactory.newInstance()
                 parser = fact.newPullParser()
+                val inputStream : InputStream = resources.openRawResource(R.raw.info)
+                val byteArray = ByteArray(inputStream.available())
+                inputStream.read(byteArray)
+                s = String(byteArray)
                 parser.setInput(StringReader(s))
+                tv_parsing_text.text = s
+
                 var type = parser.eventType
                 var bName = false
                 var bAge = false
+                var bTel = false
                 var tag: String
                 while (type != XmlPullParser.END_DOCUMENT) {
                     when (type) {
@@ -47,15 +46,24 @@ class ParsingActivity : AppCompatActivity() {
                                 bName = true
                             } else if (tag == "age") {
                                 bAge = true
+                            }else if (tag == "tel") {
+                                bTel = true
                             }
                         }
                         XmlPullParser.TEXT -> {
-                            if (bName) {
-                                r += "이름: " + parser.text
-                                bName = false
-                            } else if (bAge) {
-                                r += "나이: " + parser.text
-                                bAge = false
+                            when {
+                                bName -> {
+                                    r += "이름: " + parser.text
+                                    bName = false
+                                }
+                                bAge -> {
+                                    r += "나이: " + parser.text
+                                    bAge = false
+                                }
+                                bTel -> {
+                                    r += "전화번호: " + parser.text +"\n"
+                                    bTel = false
+                                }
                             }
                         }
                     }
