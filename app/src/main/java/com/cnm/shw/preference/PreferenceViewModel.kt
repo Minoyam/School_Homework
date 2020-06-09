@@ -11,7 +11,7 @@ class PreferenceViewModel : ViewModel() {
     fun updateNum(num: Int, index: Int): String {
         when (index) {
             1 -> {
-                Log.e("1",a.value?.get(0).toString())
+                Log.e("a",a.value?.get(0).toString())
                 a.value = listOf(num, a.value!![1], a.value!![2])
                 return a.value?.get(0).toString()
             }
@@ -24,6 +24,6 @@ class PreferenceViewModel : ViewModel() {
                 return a.value?.get(2).toString()
             }
         }
-        return "1"
+        return "a"
     }
 }
