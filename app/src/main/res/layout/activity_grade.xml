@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".db.GradeActivity">
+
+    <EditText
+        android:id="@+id/et_grade_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="학번" />
+
+    <EditText
+        android:id="@+id/et_grade_kor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="국어" />
+
+    <EditText
+        android:id="@+id/et_grade_eng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="영어" />
+
+    <EditText
+        android:id="@+id/et_grade_math"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="수학" />
+
+    <Button
+        android:id="@+id/bt_grade_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="제출" />
+    <TextView
+        android:id="@+id/tv_grade_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
