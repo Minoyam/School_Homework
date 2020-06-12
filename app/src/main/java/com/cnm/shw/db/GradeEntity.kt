@@ -6,8 +6,10 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "grade")
 data class GradeEntity(
-    @PrimaryKey val num : String,
-    @ColumnInfo(name = "kor") val kor : String?,
-    @ColumnInfo(name = "end") val eng : String?,
-    @ColumnInfo(name = "math") val math : String?
+    @PrimaryKey val num: String,
+    @ColumnInfo(name = "kor") var kor: String = "0",
+    @ColumnInfo(name = "end") var eng: String = "0",
+    @ColumnInfo(name = "math") var math: String = "0",
+    @ColumnInfo(name = "total") var total: String = "0",
+    @ColumnInfo(name = "avg") var avg: String = "0"
 )

@@ -8,7 +8,8 @@ import androidx.room.Query
 @Dao
 interface GradeDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertAll(vararg grades: GradeEntity)
+    fun insert(vararg grade: GradeEntity)
+
     @Query("SELECT * FROM grade")
     fun getAll(): List<GradeEntity>
 }
