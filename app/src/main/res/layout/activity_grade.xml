@@ -143,6 +143,16 @@
         android:layout_weight="1"
         android:text="보기" />
 </LinearLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="SQL"/>
+    <Button
+        android:id="@+id/bt_student_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SQL문 실행"/>
+
     <TextView
         android:id="@+id/tv_grade_text"
         android:layout_width="wrap_content"

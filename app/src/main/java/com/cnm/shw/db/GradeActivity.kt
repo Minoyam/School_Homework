@@ -73,6 +73,24 @@ class GradeActivity : AppCompatActivity() {
             thread.start()
             it.hideKeyboard()
         }
+        bt_student_all.setOnClickListener {
+            val r = Runnable {
+                val list = gradeDb?.gradeDao()?.getAll()
+                val list2 = studentDb?.studentDao()?.getAll()
+
+                var text = ""
+                for(i in 0 until list!!.size-1){
+                    text += "${list[i].num} ${list[i].kor} ${list[i].eng} ${list[i].math} ${list[i].total} ${list[i].avg.substring(0,4)} " +
+                            "${list2?.get(i)?.num} ${list2?.get(i)?.name} ${list2?.get(i)?.age} ${list2?.get(i)?.sex}\n"
+                }
+                runOnUiThread {
+                    tv_grade_text.text = text
+                }
+            }
+            val thread = Thread(r)
+            thread.start()
+            it.hideKeyboard()
+        }
     }
 
     private fun delete() {
