@@ -11,11 +11,13 @@ import kotlinx.android.synthetic.main.activity_grade.*
 class GradeActivity : AppCompatActivity() {
 
     private var gradeDb: GradeDatabase? = null
+    private var studentDb: StudentDatabase? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_grade)
         gradeDb = GradeDatabase.getInstance(this)
+        studentDb = StudentDatabase.getInstance(this)
 
         bt_grade_submit.setOnClickListener {
             submit()
@@ -41,6 +43,35 @@ class GradeActivity : AppCompatActivity() {
                 submit()
                 cal("수정 완료")
             bt_grade_update.hideKeyboard()
+        }
+        bt_student_submit.setOnClickListener {
+            val num = et_student_num.text.toString()
+            val name = et_student_name.text.toString()
+            val age = et_student_age.text.toString()
+            val sex = et_student_sex.text.toString()
+            val r = Runnable {
+                studentDb?.studentDao()?.insert(StudentEntity(num, name, age, sex))
+
+            }
+            val thread = Thread(r)
+            thread.start()
+            tv_grade_text.text = "insert into score values($num, $name, $age, $sex)"
+            it.hideKeyboard()
+        }
+        bt_student_show.setOnClickListener {
+            val r = Runnable {
+                val list = studentDb?.studentDao()?.getAll()
+                var text = ""
+                list?.forEach {
+                    text += "${it.num} ${it.name} ${it.age} ${it.sex}\n"
+                }
+                runOnUiThread {
+                    tv_grade_text.text = text
+                }
+            }
+            val thread = Thread(r)
+            thread.start()
+            it.hideKeyboard()
         }
     }
 
