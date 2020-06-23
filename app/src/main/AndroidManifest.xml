@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MultiTouchActivity" />
-        <activity android:name=".PinchZoomActivity">
+        <activity android:name=".PinchZoomActivity"/>
+        <activity android:name=".FrameAnimationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
