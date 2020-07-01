@@ -7,10 +7,28 @@
     tools:context=".FrameAnimationActivity">
 
     <Button
-        android:id="@+id/bt_animation_start"
+        android:id="@+id/bt_animation_translate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="start" />
+        android:text="TRANSLATE" />
+
+    <Button
+        android:id="@+id/bt_animation_rotate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ROTATE" />
+
+    <Button
+        android:id="@+id/bt_animation_scale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SCALE" />
+
+    <Button
+        android:id="@+id/bt_animation_alpha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ALPHA" />
 
     <ImageView
 

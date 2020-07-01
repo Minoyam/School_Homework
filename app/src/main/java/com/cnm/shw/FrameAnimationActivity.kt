@@ -5,13 +5,33 @@ import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_frame_animation.*
 
-class FrameAnimationActivity : AppCompatActivity(){
+class FrameAnimationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_frame_animation)
-        val ani2 = AnimationUtils.loadAnimation(this,R.anim.rotate)
-        bt_animation_start.setOnClickListener {
-            iv_animation_run.startAnimation(ani2)
+        val translate = AnimationUtils.loadAnimation(this, R.anim.traslate).apply {
+            duration = 500
+        }
+        val rotate = AnimationUtils.loadAnimation(this, R.anim.rotate)
+        val scale = AnimationUtils.loadAnimation(this, R.anim.scale).apply {
+            duration = 500
+        }
+        val alpha = AnimationUtils.loadAnimation(this, R.anim.alpha).apply {
+            duration = 500
+        }
+
+
+        bt_animation_translate.setOnClickListener {
+            iv_animation_run.startAnimation(translate)
+        }
+        bt_animation_rotate.setOnClickListener {
+            iv_animation_run.startAnimation(rotate)
+        }
+        bt_animation_scale.setOnClickListener {
+            iv_animation_run.startAnimation(scale)
+        }
+        bt_animation_alpha.setOnClickListener {
+            iv_animation_run.startAnimation(alpha)
         }
 
     }
