@@ -19,8 +19,9 @@ class FrameAnimationActivity : AppCompatActivity() {
         val alpha = AnimationUtils.loadAnimation(this, R.anim.alpha).apply {
             duration = 500
         }
-
-
+        val mix = AnimationUtils.loadAnimation(this, R.anim.mix).apply {
+            duration = 1000
+        }
         bt_animation_translate.setOnClickListener {
             iv_animation_run.startAnimation(translate)
         }
@@ -33,6 +34,8 @@ class FrameAnimationActivity : AppCompatActivity() {
         bt_animation_alpha.setOnClickListener {
             iv_animation_run.startAnimation(alpha)
         }
-
+        bt_animation_mix.setOnClickListener {
+            iv_animation_run.startAnimation(mix)
+        }
     }
 }
